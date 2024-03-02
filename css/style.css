@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+
+.container{
+    min-height: 100%;
+    padding: 5% 10%;
+    width: 100%;
+}
+
+/* CONTAINER CREACION DE LAS TAREAS*/
+
+
+.creacionDeTareas{
+    width: 100%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+    background: rgba(216, 215, 215, 0.719);
+    border-radius: 20px;
+}
+
+.tituloTarea {
+    margin: 30px;
+    position: relative;
+  }
+  
+  .tituloTarea input {
+    padding: 15px 20px;
+    outline: none;
+    background: transparent;
+    border-radius: 5px;
+    color:#0B2447;
+    border: 1px solid#0B2447;
+    font-size: 1em;
+  }
+  
+  .tituloTarea span {
+    position: absolute;
+    left: 0;
+    font-size: 0.7em;
+    transform: translateX(14px) translateY(-7.5px);
+    padding: 0 6px 1px 5px;
+    border-radius: 2px;
+    background: #212121;
+    letter-spacing: 1px;
+    background:#0B2447;
+    border: 1px solid#eeeff1;
+    color: #ffffff;
+  }
+  
+
+  /* AGREGAR FECHAS */
+
+.fechas{
+    width: 80%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.fechaDeInicio,
+.fechaDeFin{
+    width: 20%;
+    height: 30%;
+    background-color: #f5f5f5;
+    color:#0B2447;
+    padding: .15rem .5rem;
+    min-height: 40px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    line-height: 1.15;
+    box-shadow: 0px 10px 20px -18px;
+  }
+  
+  
+  input:hover {
+    outline: 1px solid lightgrey;
+  }
+
+/* AGREGAR DESCRIPCION*/
+
+.inputDescripcionDeTarea {
+    width: 50%;
+    height: 30%;
+    border: 2px solid #0B2447;
+    border-top: none;
+    background: transparent;
+    outline: none;
+    box-shadow: 7px 7px 0px 0px #0B2447;
+    transition: all 0.5s;
+  }
+
+.inputDescripcionDeTarea:focus {
+    box-shadow: none;
+    transition: all 0.5s;
+  }
+  
+
+/* BOTONES AGREGAR/EDITAR Y ELIMINAR*/
+
+.botonesDeLaTarea{
+    width: 80%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.botonAgregar,
+.botonEditar,
+.botonEliminar {
+    position: relative;
+    background: transparent;
+    padding: 0px;
+    border: none;
+    cursor: pointer;
+    outline-offset: 4px;
+    outline-color: deeppink;
+    transition: filter 250ms;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  
+  .shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #0B2447;
+    border-radius: 8px;
+    filter: blur(2px);
+    will-change: transform;
+    transform: translateY(2px);
+    transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+  }
+  
+  .edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+    background: linear-gradient(
+      to right,
+      hsl(248, 39%, 39%) 0%,
+      hsl(248, 39%, 49%) 8%,
+      hsl(248, 39%, 39%) 92%,
+      hsl(248, 39%, 29%) 100%
+    );
+  }
+  
+  .front {
+    display: block;
+    position: relative;
+    border-radius: 8px;
+    background: #0B2447;
+    padding: 16px 32px;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 1rem;
+    transform: translateY(-4px);
+    transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+  }
+  
+  .botonAgregar:hover,
+  .botonEditar:hover,
+  .botonEliminar:hover {
+    filter: brightness(110%);
+  }
+  
+  .botonAgregar:hover .front,
+  .botonEditar:hover .front,
+  .botonEliminar:hover .front {
+    transform: translateY(-6px);
+    transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+  }
+  
+  .botonAgregar:active .front,
+  .botonEditar:active .front,
+  .botonEliminar:active .front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+  }
+  
+  .botonAgregar:hover .shadow,
+  .botonEditar:hover .shadow ,
+  .botonEliminar:hover .shadow  {
+    transform: translateY(4px);
+    transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+  }
+  
+  .botonAgregar:active .shadow,
+  .botonEditar:active .shadow,
+  .botonEliminar:active .shadow   {
+    transform: translateY(1px);
+    transition: transform 34ms;
+  }
+  
+  .botonAgregar:focus:not(:focus-visible),
+  .botonEditar:focus:not(:focus-visible),
+  .botonEliminar:focus:not(:focus-visible) {
+    outline: none;
+  }
+  
+
+/* CONTAINER TAREAS PENDIENTES*/
+
+
+.pendientes{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    padding: 5% 10%;
+}
+
+.tareasPendientes{
+    width: 50%;
+    height: 90%;
+    background: #0B2447;
+}
+
+.listaDePendientes{
+    margin: 20px;
+    height: 10%;
+}
+
+.botones{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 50%;
+    height: 90%;
+    background:#0B2447;
+}
+
+.tareaLista{
+    margin: 20px;
+    width: 8%;
+    height: 10%;
+}
+
+.tareaNoLista{
+    margin: 20px;
+    width: 8%;
+    height: 10%;
+}
+
+.separadorDeTareas{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 30px;
+    padding: 5% 10%;
+}
+
+.tareasCumplidas{
+    width: 50%;
+    height: 90%;
+    border-radius: 10px;
+    transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: #0B2447;
+}
+
+.tareaCumplida{
+    margin: 20px;
+    height: 10%;
+}
+
+.tareasFallidas{
+    width: 50%;
+    height: 90%;
+    border-radius: 10px;
+    transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: #0B2447;
+}
+
+.tareaFallida{
+    margin: 20px;
+    height: 10%;
+}
+
+#shadow{
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.144),
+    0 0  0 2px rgb(190, 190, 190),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.747);
+}
