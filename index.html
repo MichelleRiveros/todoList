@@ -14,16 +14,16 @@
         <div class="creacionDeTareas">
 
             <div class="tituloTarea">
-                <input required="" type="text" placeholder="Write here...">
+                <input required="" type="text" id="tituloTareaId" placeholder="Write the title...">
                 <span>Title :</span>
             </div>
             
             <div class="fechas">
-                <input class="fechaDeInicio" type="date">
-                <input class="fechaDeFin" type="date">
+                <input class="fechaDeInicio" id="fechaDeInicio" type="date">
+                <input class="fechaDeFin" id="fechaDeFin" type="date">
             </div>
 
-            <input class="inputDescripcionDeTarea" type="text">
+            <input class="inputDescripcionDeTarea" id="inputDescripcionDeTarea" type="text">
 
 
             <div class="botonesDeLaTarea">
@@ -43,14 +43,6 @@
                         Editar
                     </span>
                   </button>
-
-                  <button class="botonEliminar">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <span class="front">
-                        Eliminar
-                    </span>
-                  </button>
             </div>
             
         </div>
@@ -62,16 +54,12 @@
                 </span>
             </button>
 
-            <div class="containerPendientesYBotones">
-                <div class="tareasPendientes">
-                    <!-- <div class="listaDePendientes">kh</div> -->
-                </div>
+            <div class="containerPendientesYBotones scroll">
 
-                <div class="botones">
-                    <!-- <div class="tareaLista">dsd</div>
-                    <div class="tareaNoLista">sdf</div> -->
-                </div>
+                <div class="tareasPendientes"></div>
+                
             </div>
+
         </div>
 
         <div class="separadorDeTareas">
@@ -89,9 +77,9 @@
                         <span>Tareas Cumplidas</span> 
                     </button>     
 
-                    <div class="containertareaCumplida">
+                    <div class="containertareaCumplida scroll">
 
-                        <!-- <div class="tareaCumplida">asd</div>     -->
+                        <!-- <div class="tareaCumplida"></div>     -->
 
                     </div>
 
@@ -104,7 +92,7 @@
                         <span>Tareas Fallidas</span> 
                     </button> 
 
-                    <div class="containertareaFallida">
+                    <div class="containertareaFallida scroll">
 
                         <!-- <div class="tareaFallida">asd</div>     -->
 

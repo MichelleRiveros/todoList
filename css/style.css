@@ -65,6 +65,7 @@
     width: 80%;
     height: 20%;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -116,6 +117,7 @@
 .botonesDeLaTarea{
     width: 80%;
     height: 20%;
+    flex-wrap: wrap;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -167,6 +169,7 @@
   
   .front {
     display: block;
+    flex-wrap: wrap;
     position: relative;
     border-radius: 8px;
     background: #0B2447;
@@ -401,39 +404,64 @@
   width: 100%;
   height: 500px;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
 }
 
 .tareasPendientes{
-    width: 50%;
-    height: 100%;
-    background: #0B2447;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background: #0B2447;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .listaDePendientes{
-    margin: 20px;
-    height: 10%;
+  width: 100%;
+  height: 17%;
+  display: flex;
+  padding: 0 15%;
+  flex-wrap: wrap;
+  align-items: center;
+  color: white;
+  background: #0B2447;
 }
+
 
 .botones{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    width: 50%;
-    height: 100%;
-    background:#0B2447;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 50%;
+  height: 100%;
 }
 
-.tareaLista{
-    margin: 20px;
-    width: 8%;
-    height: 10%;
+.taskLista{
+  background: white;
+  color: #0B2447;
+  margin: 20px;
+  width: 10%;
+  height: 50%;
 }
 
-.tareaNoLista{
-    margin: 20px;
-    width: 8%;
-    height: 10%;
+.taskFallida{
+  background: white;
+  margin: 20px;
+  width: 10%;
+  height: 50%;
+} 
+
+.eliminarTask{
+  background: white;
+  color: #0B2447;
+  margin: 20px;
+  width: 20%;
+  height: 50%;
+}
+
+
+.scroll{
+  overflow-y: scroll;
 }
 
 /* SEPARADOR DE TAREAS (ESTATUS CUMPLIDO O FALLIDO)*/
